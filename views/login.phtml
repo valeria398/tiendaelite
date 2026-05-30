@@ -1,0 +1,112 @@
+<!-- ===================== MODAL LOGIN ===================== -->
+
+<div 
+    class="login-overlay"
+    id="login-overlay"
+    onclick="cerrarLogin()"
+></div>
+
+<div class="login-modal" id="login-modal">
+
+    <!-- BOTON CERRAR -->
+    <button
+        class="login-cerrar"
+        onclick="cerrarLogin()"
+    >
+        &#10005;
+    </button>
+
+
+    <!-- HEADER -->
+    <div class="login-modal-header">
+
+        <div class="login-modal-logo">
+            <?= htmlspecialchars($logo ?? 'Elite') ?>
+        </div>
+
+        <p class="login-modal-subtitle">
+            <?= htmlspecialchars($subtitulo_login ?? 'Ingresa a tu cuenta') ?>
+        </p>
+
+    </div>
+
+
+    <!-- FORMULARIO -->
+    <form
+        method="POST"
+        action="index.php"
+    >
+
+        <!-- EMAIL -->
+        <div class="login-campo">
+
+            <label for="campo-email">
+                Correo electronico
+            </label>
+
+            <input
+                type="email"
+                name="email"
+                id="campo-email"
+                placeholder="correo@ejemplo.com"
+                required
+                onkeydown="if(event.key==='Enter') document.getElementById('campo-password').focus()"
+            >
+
+        </div>
+
+
+        <!-- PASSWORD -->
+        <div class="login-campo">
+
+            <label for="campo-password">
+                Contrasena
+            </label>
+
+            <input
+                type="password"
+                name="password"
+                id="campo-password"
+                placeholder="Tu contrasena"
+                required
+                onkeydown="if(event.key==='Enter') this.form.submit()"
+            >
+
+        </div>
+
+
+        <!-- BOTON -->
+        <button
+            type="submit"
+            class="btn-entrar"
+        >
+            Iniciar Sesion
+        </button>
+
+
+        <!-- ERROR -->
+        <?php if (!empty($error_login)): ?>
+
+            <span class="error-login" id="login-error">
+                <?= htmlspecialchars($error_login) ?>
+            </span>
+
+        <?php endif; ?>
+
+
+        <!-- FOOTER -->
+        <div class="login-footer">
+
+            <p>
+                ¿No tienes cuenta?
+
+                <a href="<?= htmlspecialchars($ruta_registro ?? '#') ?>">
+                    Registrate aqui
+                </a>
+            </p>
+
+        </div>
+
+    </form>
+
+</div>
