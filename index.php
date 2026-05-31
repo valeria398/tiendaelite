@@ -80,6 +80,38 @@ if (isset($_GET['action']) && $_GET['action'] === 'logout') {
         <?= htmlspecialchars($titulo ?? 'Elite Moda') ?>
     </title>
 
+    <meta name="description"
+          content="Elite Moda es una tienda online de ropa, accesorios y moda con compras seguras y envíos rápidos en Colombia.">
+
+    <meta name="keywords"
+          content="ropa, moda, tienda online, ecommerce, accesorios, Colombia, Elite Moda">
+
+    <meta name="robots"
+          content="index, follow">
+
+    <meta name="author"
+          content="Elite Moda">
+
+    <meta property="og:title"
+          content="Elite Moda - Tienda Online">
+
+    <meta property="og:description"
+          content="Compra ropa y accesorios de moda de forma fácil y segura en Elite Moda.">
+
+    <meta property="og:type"
+          content="website">
+
+    <meta property="og:url"
+          content="https://ecommerce-tiendaelite.onrender.com">
+
+    <meta property="og:site_name"
+          content="Elite Moda">
+
+    <meta property="og:locale"
+          content="es_CO">
+
+    <link rel="canonical"
+          href="https://ecommerce-tiendaelite.onrender.com">
 
     <!-- CSS -->
     <link rel="stylesheet" href="assets/css/variables.css">
@@ -93,12 +125,6 @@ if (isset($_GET['action']) && $_GET['action'] === 'logout') {
     <link rel="stylesheet" href="assets/css/productos.css">
     <link rel="stylesheet" href="assets/css/responsive.css">
     <link rel="stylesheet" href="assets/css/toast.css">
-
-    <!-- FONT AWESOME -->
-    <link
-        rel="stylesheet"
-        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
-    >
 
 </head>
 
